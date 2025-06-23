@@ -1,0 +1,41 @@
+1. O que é o loop de eventos e qual sua importância no Node.js?
+O loop de eventos (event loop) é o coração do Node.js. Ele é responsável por coordenar todas as operações assíncronas, como leitura de arquivos, requisições HTTP, timers, entre outros. Sua principal importância é permitir que o Node.js execute várias tarefas de forma eficiente sem travar o programa, mesmo funcionando com apenas uma única thread. Isso torna o Node.js muito ágil e leve para aplicações que precisam lidar com muitas conexões simultâneas.
+
+2. Diferencie CommonJS de ES Modules.
+CommonJS é o sistema tradicional de módulos utilizado pelo Node.js, que usa as palavras-chave "require" para importar e "module.exports" para exportar. Já os ES Modules, ou Módulos ECMAScript, são o padrão moderno do JavaScript, que utilizam "import" e "export" para manipular módulos. A principal diferença entre eles está na forma de uso, na compatibilidade com navegadores e na maneira como os módulos são carregados.
+
+3. O que são Streams e Buffers?
+Streams são mecanismos que permitem trabalhar com grandes volumes de dados de forma fragmentada, ou seja, os dados são processados aos poucos, à medida que chegam, sem precisar carregá-los todos de uma vez na memória. Buffers, por sua vez, são estruturas de dados usadas para armazenar temporariamente esses dados binários enquanto estão sendo manipulados. Ambos são essenciais para lidar com arquivos grandes ou fluxos contínuos de dados, como transmissões ao vivo.
+
+4. Liste três tipos de Streams e suas aplicações.
+Os três tipos principais de Streams são:
+Readable Stream, utilizado para leitura de dados, como ao ler um arquivo do disco.
+
+
+Writable Stream, usado para escrita de dados, como ao salvar um conteúdo em um arquivo.
+
+
+Duplex Stream, que combina leitura e escrita, muito comum em conexões de rede onde é necessário enviar e receber dados ao mesmo tempo.
+
+
+
+5. Explique a diferença entre erros de runtime e erros de sintaxe.
+Erros de sintaxe ocorrem quando o código está mal estruturado, como esquecer um parêntese ou escrever uma palavra-chave incorretamente. Esse tipo de erro impede o programa de sequer iniciar. Já os erros de runtime acontecem durante a execução do programa, mesmo que a sintaxe esteja correta. Um exemplo seria tentar acessar um arquivo que não existe ou usar uma variável indefinida.
+
+6. Quais são as vantagens de usar Streams para processamento de dados?
+Usar Streams traz diversas vantagens, principalmente em termos de performance. Eles permitem que grandes quantidades de dados sejam processadas aos poucos, economizando memória e aumentando a eficiência. Isso é ideal para trabalhar com arquivos grandes, como vídeos ou logs, e para aplicações que recebem dados em tempo real, como servidores web ou APIs.
+
+7. Como o módulo fs pode ser usado para manipular arquivos?
+O módulo "fs", que significa "file system", é utilizado no Node.js para realizar operações com arquivos e diretórios. Com ele, é possível ler o conteúdo de arquivos, criar novos arquivos, sobrescrevê-los, renomeá-los e até mesmo excluí-los. Essas funções são muito úteis em aplicações que precisam lidar com dados armazenados localmente, como leitura de configurações ou geração de relatórios.
+
+8. O que acontece quando um erro não é tratado em um stream?
+Quando um erro ocorre em um stream e não é tratado corretamente, o Node.js pode encerrar o processo de forma abrupta, causando a queda da aplicação. Por isso, é essencial sempre monitorar e capturar erros que possam surgir durante o uso de streams, garantindo que a aplicação continue funcionando mesmo em situações inesperadas.
+
+9. Qual é a função do http no Node.js?
+O módulo "http" do Node.js é responsável por criar servidores web. Ele permite receber requisições, processá-las e enviar respostas para os usuários. Esse módulo é uma das bases para construir aplicações web e APIs no Node.js, sendo possível criar desde sistemas simples até soluções mais complexas com integração de rotas e controle de dados.
+
+10. Explique o papel do Thread Pool no Node.js.
+Embora o Node.js funcione com apenas uma thread principal, ele conta com um componente chamado Thread Pool. Esse grupo de threads auxilia na execução de tarefas mais pesadas ou demoradas, como acesso ao sistema de arquivos ou operações criptográficas. Enquanto essas tarefas são processadas em segundo plano, a thread principal continua livre para lidar com outras operações, mantendo o desempenho da aplicação alto e o tempo de resposta rápido.
+
+
+
