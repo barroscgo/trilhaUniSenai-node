@@ -1,0 +1,31 @@
+# Node modules
+node_modules/
+
+# Variáveis de ambiente (senha, usuário do banco etc.)
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Sistema operacional
+.DS_Store          # macOS
+Thumbs.db          # Windows
+
+# Editor de código
+.vscode/
+.idea/
+*.swp
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Banco de dados local (se houver arquivos de dump ou SQLite)
+*.sql
+*.sqlite
+
+# Pastas de build (caso use ferramentas que gerem dist/)
+dist/
+build/
