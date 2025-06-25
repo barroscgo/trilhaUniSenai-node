@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<h2><%= titulo %></h2>
+
+<form action="/cadastro" method="POST">
+  <label>Nome:</label>
+  <input type="text" name="nome" required />
+  <button type="submit">Cadastrar</button>
+</form>
+
+<%- include('../partials/footer') %>

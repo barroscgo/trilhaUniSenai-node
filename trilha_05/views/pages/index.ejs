@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<h2><%= titulo %></h2>
+
+<ul>
+  <% usuarios.forEach(u => { %>
+    <li><%= u.nome %></li>
+  <% }) %>
+</ul>
+
+<%- include('../partials/footer') %>
