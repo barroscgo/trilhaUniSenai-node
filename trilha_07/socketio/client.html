@@ -1,0 +1,27 @@
+<!-- socketio/client.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Socket.io</title>
+</head>
+<body>
+  <input id="msg" placeholder="Mensagem" autocomplete="off" />
+  <button onclick="enviar()">Enviar</button>
+  <ul id="chat"></ul>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script>
+    const socket = io('http://localhost:3000');
+    function enviar() {
+      const input = document.getElementById('msg');
+      socket.emit('mensagem', input.value);
+      input.value = '';
+    }
+    socket.on('mensagem', (msg) => {
+      const li = document.createElement('li');
+      li.textContent = msg;
+      document.getElementById('chat').appendChild(li);
+    });
+  </script>
+</body>
+</html>
